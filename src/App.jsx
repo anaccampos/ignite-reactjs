@@ -1,6 +1,10 @@
-export function App() {
+import { RepositoryList } from './components/RepositoryList';
+import './styles/global.scss';
 
-    throw new Error('Erro!');
-    
-    return <h1>Hello ReactJS!</h1>
+// Componente é um função que que retorna um HTML (jsx)
+// Por convenção, um arquivo tem só um componente sendo exportado
+
+
+export function App() {
+    return <RepositoryList />
 }
