@@ -1,4 +1,12 @@
-export function RepositoryItem(props) {
+interface RepositoryItemProps{
+    repository: {
+        name: string;
+        description: string;
+        html_url: string;
+    }
+}
+
+export function RepositoryItem(props: RepositoryItemProps) {
 
     // Essa '?' antes da propriedade verifica se a propriedade existe
     // Senão, ela nem procura pelo próximo atributo
@@ -11,7 +19,7 @@ export function RepositoryItem(props) {
             <strong>{props.repository?.name ?? "Default"}</strong>
             <p>{props.repository.description}</p>
 
-            <a href={props.repository.link}>
+            <a href={props.repository.html_url}>
                 Acessar repositório
             </a>
         </li>
